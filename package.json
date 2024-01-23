@@ -1,13 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "next-kickstart",
+  "name": "omnipixcraft-front",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "----RUN": "",
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
-    "dev": "next dev",
+    "dev": "wrangler pages dev -- next dev",
     "start": "next start",
     "----CHECK": "",
     "format:check": "prettier --check .",
@@ -27,6 +27,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.0",
     "@lucia-auth/adapter-mysql": "^2.1.0",
+    "@lucia-auth/adapter-sqlite": "^2.0.1",
     "@lucia-auth/oauth": "^3.5.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
@@ -61,6 +62,8 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.8.5",
+    "@cloudflare/workers-types": "^4.20240117.0",
     "@ducanh2912/next-pwa": "^9.4.0",
     "@edge-runtime/vm": "^3.0.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
@@ -87,6 +90,7 @@
     "tailwindcss-animate": "^1.0.6",
     "typescript": "^5",
     "vitest": "^0.34.2",
-    "vitest-dom": "^0.1.0"
+    "vitest-dom": "^0.1.0",
+    "wrangler": "^3.23.0"
   }
 }
